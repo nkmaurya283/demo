@@ -25,6 +25,8 @@ Feature: Demo for rest api using karate
     * def id = response.id
     * print 'created id is: ' + id
 
+
+
   Scenario: PUT rest api example
     *  def user =
 """
@@ -45,3 +47,7 @@ Feature: Demo for rest api using karate
     "updatedAt": #notnull
   }
   """
+    Given path 'api/users/2'
+    Then method delete
+
+
